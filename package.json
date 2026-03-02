@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/ejercicio-2.js\"",
     "doc": "typedoc",
-    "test": "vitest run"
+    "test": "vitest run",
+    "coverage": "vitest run --coverage --coverage.include src/*"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/ULL-ESIT-INF-DSI-2526/prct04-arrays-tuples-enums-Abel-Martin-Meneses#readme",
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-tsdoc": "^0.5.0",
