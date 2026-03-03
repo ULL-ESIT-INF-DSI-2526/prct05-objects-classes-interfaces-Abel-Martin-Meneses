@@ -7,7 +7,7 @@ export abstract class ElementoBibliografico implements IEEE {
     public palabrasClave: string[],
     public resumen: string,
     public fechaPublicacion: Date,
-    public paginas: number,
+    public paginas: string,
     public editorial: string
   ) {}
 

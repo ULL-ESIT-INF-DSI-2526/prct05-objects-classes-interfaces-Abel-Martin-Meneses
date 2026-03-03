@@ -7,7 +7,7 @@ export class CapituloLibro extends ElementoBibliografico {
     palabrasClave: string[], 
     resumen: string,
     fecha: Date, 
-    paginas: number, 
+    paginas: string, 
     editorial: string,
     public tituloLibro: string
   ) {

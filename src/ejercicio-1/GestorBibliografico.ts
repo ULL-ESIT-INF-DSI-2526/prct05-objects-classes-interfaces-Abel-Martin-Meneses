@@ -33,7 +33,7 @@ const gestor = new GestorBibliografico();
 
 const art1 = new ArticuloRevista(
   "IA en la ULL", ["Juan Pérez"], ["IA", "Educación"], "Resumen...", 
-  new Date("2023-05-10"), 20, "IEEE Press", "Revista de Computación", 12, 4
+  new Date("2023-05-10"), "10-20", "IEEE Press", "Revista de Computación", 12, 4
 );
 
 gestor.agregarElemento(art1);

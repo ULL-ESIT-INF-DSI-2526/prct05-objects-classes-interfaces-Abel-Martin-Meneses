@@ -7,7 +7,7 @@ export class ArticuloRevista extends ElementoBibliografico {
     palabrasClave: string[],
     resumen: string,
     fechaPublicacion: Date,
-    paginas: number,
+    paginas: string,
     editorial: string,
     public revista: string, 
     public volumen: number, 
