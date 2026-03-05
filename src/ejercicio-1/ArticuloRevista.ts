@@ -1,5 +1,9 @@
 import { ElementoBibliografico } from "./ElementoBibliografico";
 
+/**
+ * Clase que extiende a la clase ElementoBibliográfico. La clase representa a un artículo de revista
+ */
+
 export class ArticuloRevista extends ElementoBibliografico {
   constructor(
     titulo: string,
@@ -15,6 +19,11 @@ export class ArticuloRevista extends ElementoBibliografico {
   ) {
     super(titulo, autores, palabrasClave, resumen, fechaPublicacion, paginas, editorial);
   }
+
+  /**
+   * Este método convierte los atributos del ArticuloRevista a formato IEEE
+   * @returns devuelve los datos del artículo en formato IEEE
+   */
 
   toIEEE(): string {
     const autoresStr = this.autores.join(", ");

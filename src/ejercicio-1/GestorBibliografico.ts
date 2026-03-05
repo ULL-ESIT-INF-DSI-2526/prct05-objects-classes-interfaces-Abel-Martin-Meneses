@@ -1,16 +1,36 @@
 import { ElementoBibliografico } from "./ElementoBibliografico";
 import { ArticuloRevista } from "./ArticuloRevista";
 
+/**
+ * Esta clase se utiliza para gestionar los distintos ElementoBibliografico
+ */
+
 export class GestorBibliografico {
   private elementos: ElementoBibliografico[] = [];
+
+  /**
+   * Este método sirve para agregar un elemento al conjunto de elementos bibliograficos
+   * @param elemento - es el elemento a agregar
+   */
 
   agregarElemento(elemento: ElementoBibliografico): void {
     this.elementos.push(elemento);
   }
 
+  /**
+   * Este método sirve para mostrar en formato de tabla los datos del gestor
+   * @param datos - son los elementos a mostrar en la tabla
+   */
+
   mostrarTabla(datos = this.elementos): void {
     console.table(datos);
   }
+
+  /**
+   * Este método sirve para buscar mediante filtros dentro del conjunto de elementos bibliograficos
+   * @param criterios - son los criterios que se utilizan para buscar un elemento concreto
+   * @returns 
+   */
 
   buscar(criterios: { keyword?: string, titulo?: string, autores?: string, editorial?: string }): ElementoBibliografico[] {
     return this.elementos.filter(el => {
@@ -22,6 +42,11 @@ export class GestorBibliografico {
       return matchKeyword && matchTitulo && matchEditorial && matchAutores;
     });
   }
+
+  /**
+   * Este método sirve para exportar los datos del gestor en formato IEEE
+   * @param elementos - son los elementos a exportar en IEEE
+   */
 
   exportarIEEE(elementos: ElementoBibliografico[]): void {
     console.log("--- EXPORTACIÓN IEEE ---");
